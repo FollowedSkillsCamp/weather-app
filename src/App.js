@@ -5,6 +5,9 @@ import Weather from './components/Weather';
 
 const API_KEY = "dafd952bef8a0dae5ffad270976abcb3";
 
+
+
+
 class App extends React.Component {
   state = {
     temperature: undefined,
@@ -19,7 +22,7 @@ class App extends React.Component {
     e.preventDefault();
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
-    var api_call = await fetch('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=dafd952bef8a0dae5ffad270976abcb3&units=metric');
+    var api_call = await fetch("http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&appid=" + API_KEY + '&units=metric');
     const data = await api_call.json();
     if (city && country) {
       console.log(data);
