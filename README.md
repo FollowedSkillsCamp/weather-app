@@ -1,1 +1,1 @@
-![alt text](img/site.png)
+![alt text](https://github.com/FollowedSkillsCamp/weather-app/blob/master/src/img/site.png)
